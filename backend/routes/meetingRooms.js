@@ -19,12 +19,12 @@ router.get('/all', async(req,res) => {
     }
 })
 
-router.post ('/newMeetingRoom', async (req,res) =>{
+router.post ('/newroom', async (req,res) =>{
     let insertQuery = `INSERT INTO meetingRooms (name, capacity, floor)
                         VALUES ($1,$2,$3);`
 
     let name = req.body.name
-    let capacity = req.body.patient
+    let capacity = req.body.capacity
     let floor = req.body.floor
 
     let body = {
@@ -63,3 +63,5 @@ router.get('/id/bookings', async (req, res) => {
         console.log(error);
     }
  })
+
+ module.exports = router;

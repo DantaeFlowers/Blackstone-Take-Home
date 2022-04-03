@@ -7,7 +7,7 @@ CREATE DATABASE stonebookings;
 CREATE TABLE meetingRooms (
     id SERIAL PRIMARY KEY,
     name VARCHAR,
-    capacity INT,
+    capacity VARCHAR,
     floor VARCHAR
 );
 

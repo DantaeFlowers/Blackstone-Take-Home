@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
-const bookingsRouter = require('./routes/bookings')
+const bookingsRouter = require ('./routes/booking')
 const meetingRoomsRouter = require ('./routes/meetingRooms')
 
 var app = express();

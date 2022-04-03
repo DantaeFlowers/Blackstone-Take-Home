@@ -50,6 +50,8 @@ router.post ('/newbooking', async (req,res) =>{
     }
 })
 
+module.exports = router;
+
 // router.delete('/cancel/:id', async (req,res) => {
 //     let id = req.params.id
 //     let deleteQuery = `DELETE FROM bookings WHERE id = ${id}`
