@@ -20,7 +20,7 @@ router.get('/all', async(req,res) => {
 })
 
 router.post ('/newbooking', async (req,res) =>{
-    let insertQuery = `INSERT INTO booking (meetingName, meetingRoom_id, startSate, endDate)
+    let insertQuery = `INSERT INTO bookings (meetingName, meetingRoom_id, startDate, endDate)
                         VALUES ($1,$2,$3,$4);`
 
     let meetingName = req.body.meetingName
@@ -36,7 +36,7 @@ router.post ('/newbooking', async (req,res) =>{
     }
 
     try{
-        await db.none(insertQuery,[meetingName,meetingName,startDate,endDate])
+        await db.none(insertQuery,[meetingName,meetingRoom_id,startDate,endDate])
         res.json ({
             status : 'Success',
             message:'New booking created',
